@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title><%= @title %></title>
+  <link rel="shortcut icon" href="/static/favicon.ico" />
+</head>
+<body>
+  <h3>Welcome to Hububba!</h3>
+  <dl>
+    <%= Enum.map @posts, fn(post) -> %>
+      <dt><%= post.title %></dt>
+      <dd><%= post.content %><dd>
+    <%= end %>
+  </dl>
+</body>
+</html>
