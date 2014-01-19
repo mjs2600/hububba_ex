@@ -6,13 +6,17 @@
 </head>
 <body>
   <h3>Welcome to Hububba!</h3>
-  <input type="text"></input>
-  <input type="submit"></input>
+  <input type="text" id="new-title"></input>
+  <textarea id="new-content"></textarea>
+  <input type="submit" id="new-post"></input>
   <dl>
     <%= Enum.map @posts, fn(post) -> %>
       <dt><%= post.title %></dt>
       <dd><%= post.content %><dd>
     <%= end %>
   </dl>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.0/Bacon.min.js"></script>
+  <script src="/static/js/application.js"></script>
 </body>
+
 </html>

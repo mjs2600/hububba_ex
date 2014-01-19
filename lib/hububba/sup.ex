@@ -6,7 +6,7 @@ defmodule Hububba.Sup do
   end
 
   def init([]) do
-    tree = [ worker(Repo, []) ]
+    tree = [ worker(Repo, []), worker(Coffee, []) ]
     supervise(tree, strategy: :one_for_all)
   end
 end
