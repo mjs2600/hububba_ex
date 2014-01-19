@@ -14,7 +14,7 @@ defmodule ApplicationRouter do
 
   get "/" do
     conn = conn.assign(:title, "Welcome to Hububba")
-    conn = conn.assign(:posts, Hububba.Post.all)
+    conn = conn.assign(:posts, Hububba.Post.Queries.most_recent)
     render conn, "index.html"
   end
 end

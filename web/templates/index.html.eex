@@ -6,6 +6,8 @@
 </head>
 <body>
   <h3>Welcome to Hububba!</h3>
+  <input type="text"></input>
+  <input type="submit"></input>
   <dl>
     <%= Enum.map @posts, fn(post) -> %>
       <dt><%= post.title %></dt>
