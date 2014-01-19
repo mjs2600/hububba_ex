@@ -15,7 +15,8 @@
       <dd><%= post.content %><dd>
     <%= end %>
   </dl>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.0/Bacon.min.js"></script>
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.0/Bacon.js"></script>
   <script src="/static/js/application.js"></script>
 </body>
 

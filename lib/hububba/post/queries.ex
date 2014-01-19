@@ -13,9 +13,4 @@ defmodule Hububba.Post.Queries do
   def all do
     Repo.all(Hububba.Post)
   end
-
-  def create(args//[]) do
-    post = Hububba.Post.new(args)
-    Repo.create post
-  end
 end

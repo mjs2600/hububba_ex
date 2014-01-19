@@ -17,4 +17,13 @@ defmodule ApplicationRouter do
     conn = conn.assign(:posts, Hububba.Post.Queries.most_recent)
     render conn, "index.html"
   end
+
+  post "/" do
+    title = conn.params["title"]
+    content = conn.params["content"]
+    post = Hububba.Post.new(title: title, content: content)
+    Repo.create post
+
+    conn.resp 200, "{}" #Hububba.Post.Queries.most_recent
+  end
 end

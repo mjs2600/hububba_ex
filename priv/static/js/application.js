@@ -4,7 +4,18 @@
 
   Post = {
     initialize: function() {
-      return alert("Hello, World!");
+      var newPosts;
+      newPosts = this.newPost.map(this.getPost);
+      return newPosts.onValue(function(val) {
+        return $.post("/", val);
+      });
+    },
+    newPost: $("#new-post").asEventStream("click"),
+    getPost: function() {
+      return {
+        title: $("#new-title").val(),
+        content: $("#new-content").val()
+      };
     }
   };
 
